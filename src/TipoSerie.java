@@ -4,6 +4,9 @@
 public class TipoSerie {
 
     public TipoSerie piramidal;
+    public TipoSerie serie21;
+    public TipoSerie gigante;
+
 
     public class tipoSerie {
         private String repeticion;
