@@ -1,4 +1,3 @@
-import javax.sound.midi.Soundbank;
 import java.util.ArrayList;
 
 /**
@@ -7,13 +6,13 @@ import java.util.ArrayList;
 public class Rutina {
 
     private ArrayList<TipoSerie> rutinaLunes;
-    private String rutinaNueva;
+    private ArrayList<Rutina> rutinaNueva;
 
-    public Rutina() {
+    public Rutina(String s, String s1) {
         this.rutinaNueva = this.hacerRutina();
     }
 
-    private String hacerRutina() {
+    private ArrayList<Rutina> hacerRutina() {
 
         ArrayList<String> piramidal = new ArrayList<>();
         piramidal.add(" 1 x 10");
@@ -33,20 +32,37 @@ public class Rutina {
         gigante.add(" 1 x 18");
         gigante.add(" 1 x 15");
 
-        ArrayList<TipoSerie> rutinaLunes = new ArrayList<>();
+        ArrayList<String> pierna = new ArrayList<>();
+        pierna.add(" Cuadriceps");
+        pierna.add(" Sentadilla");
+        pierna.add(" Isquiotiviales");
+        pierna.add(" Aductores");
+        pierna.add(" Gemelos");
 
-        for (int j = 0; j < gigante.size(); j++) {
+        ArrayList<Rutina> rutinaLunes = new ArrayList<>();
+
+        for (int p = 0; p < pierna.size(); p++) {
+            System.out.print(pierna.get(p));
+
+            for (int j = 0; j < gigante.size(); j++) {
+
                 System.out.print(gigante.get(j));
-
             }
-
-   /* public String getRutinaNueva() {
-        ArrayList<TipoSerie> RutinaNueva = new ArrayList<>();
-        return toString();
-    }*/
-            return rutinaNueva;
         }
 
+        return rutinaLunes;
     }
 
+   public String getRutinaNueva() {
+        ArrayList<Rutina> RutinaNueva = new ArrayList<>();
+        return toString();
+    }
+    // return rutinaNueva;
+    //return rutinaNueva;
 
+
+    private ArrayList<Rutina> grupoMuscular() {
+
+        return rutinaNueva;
+    }
+}

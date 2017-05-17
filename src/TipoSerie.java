@@ -27,9 +27,9 @@ public class TipoSerie {
         public void setSeries(String series) {
             this.series = series;
         }
-        @Override
-        public String toString() {
-            return "Serie{" + "repeticion ='" + repeticion + '\'' + ", grupo muscular ='" + series + '\'' + '}'+"\n";
-        }
+       // @Override
+       // public String toString() {
+         //   return "Serie{" + "repeticion ='" + repeticion + '\'' + ", grupo muscular ='" + series + '\'' + '}'+"\n";
+        //}
     }
 }
