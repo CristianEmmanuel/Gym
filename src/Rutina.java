@@ -5,14 +5,20 @@ import java.util.ArrayList;
  */
 public class Rutina {
 
-    private ArrayList<TipoSerie> rutinaLunes;
-    private ArrayList<Rutina> rutinaNueva;
+    private ArrayList<Void> nuevaSerie;
+    private ArrayList<Musculo> tipoDeMusculo;
+    private TipoSerie hacerRutina;
 
-    public Rutina(String s, String s1) {
-        this.rutinaNueva = this.hacerRutina();
+
+    public Rutina() {
+        this.hacerRutina = hacerRutina;
+        this.nuevaSerie = new ArrayList<Void>();
+        this.tipoDeMusculo = new ArrayList<>();
     }
 
-    private ArrayList<Rutina> hacerRutina() {
+
+
+    private void nuevaSerie() {
 
         ArrayList<String> piramidal = new ArrayList<>();
         piramidal.add(" 1 x 10");
@@ -25,6 +31,7 @@ public class Rutina {
         serie21.add(" 1 x 7");
         serie21.add(" 1 x 7");
 
+
         ArrayList<String> gigante = new ArrayList<>();
         gigante.add(" 1 x 15");
         gigante.add(" 1 x 18");
@@ -32,37 +39,19 @@ public class Rutina {
         gigante.add(" 1 x 18");
         gigante.add(" 1 x 15");
 
-        ArrayList<String> pierna = new ArrayList<>();
-        pierna.add(" Cuadriceps");
-        pierna.add(" Sentadilla");
-        pierna.add(" Isquiotiviales");
-        pierna.add(" Aductores");
-        pierna.add(" Gemelos");
-
-        ArrayList<Rutina> rutinaLunes = new ArrayList<>();
-
-        for (int p = 0; p < pierna.size(); p++) {
-            System.out.print(pierna.get(p));
-
-            for (int j = 0; j < gigante.size(); j++) {
-
-                System.out.print(gigante.get(j));
-            }
-        }
-
-        return rutinaLunes;
+       // return nuevaSerie();
     }
 
-   public String getRutinaNueva() {
-        ArrayList<Rutina> RutinaNueva = new ArrayList<>();
-        return toString();
+    public ArrayList<Musculo> getTipoDeMusculo() {
+        return tipoDeMusculo;
     }
-    // return rutinaNueva;
-    //return rutinaNueva;
 
-
-    private ArrayList<Rutina> grupoMuscular() {
-
-        return rutinaNueva;
+    public ArrayList<Void> getNuevaSerie() {
+        return nuevaSerie;
     }
+
+    public void descansar(){
+
+    }
+
 }
